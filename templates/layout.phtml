@@ -1,3 +1,25 @@
+<?php
+
+/**
+ * layout.phtml
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ */
+
+/**
+ * @package     templates
+ * @copyright   Copyright (c) 2013 <info@techdivision.com> - TechDivision GmbH
+ * @license     http://opensource.org/licenses/osl-3.0.php
+ *              Open Software License (OSL 3.0)
+ * @author      Johann Zelger <j.zelger@techdivision.com>
+ */
+
+/** @var $this \TechDivision\Example\Templates\DemoTemplate */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,41 +85,30 @@
     <hr>
 
     <div class="jumbotron">
-        <h1><img src="http://appserver.io/static/img/logo-black.png"/> Congrats!</h1>
+        <a href="http://appserver.io">
+            <img src="http://appserver.io/static/img/logo-black.png"/>
+        </a>
+        <h1>Congrats!</h1>
         <p class="lead">Your webapp <strong><?php echo $this->getWebappName() ?></strong> ist up and running.</strong></p>
     </div>
 
     <hr>
 
     <div class="row-fluid marketing">
-        <div class="span6">
-            <h4>Subheading</h4>
-
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-            <h4>Subheading</h4>
-
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-                fermentum.</p>
-
-            <h4>Subheading</h4>
-
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="span6">
-            <h4>Subheading</h4>
-
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-            <h4>Subheading</h4>
-
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-                fermentum.</p>
-
-            <h4>Subheading</h4>
-
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <div class="span12">
+            <table class="table-bordered">
+                <caption>Informations:</caption>
+                <tbody>
+                    <tr>
+                        <td>Request Uri:</td>
+                        <td><?php echo $this->getRequestUri() ?></td>
+                    </tr>
+                    <tr>
+                        <td>User-Agent:</td>
+                        <td><?php echo $this->getUserAgent() ?></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

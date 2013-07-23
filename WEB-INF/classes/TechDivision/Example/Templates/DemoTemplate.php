@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TechDivision\Example\Utilities\Template
+ * TechDivision\Example\Templates\DemoTemplate
  *
  * NOTICE OF LICENSE
  *
@@ -10,9 +10,9 @@
  * http://opensource.org/licenses/osl-3.0.php
  */
 
-namespace TechDivision\Example\Utilities;
+namespace TechDivision\Example\Templates;
 
-use TechDivision\Example\Utilities\AbstractTemplate;
+use TechDivision\Example\Templates\AbstractTemplate;
 
 /**
  * @package     TechDivision\Example
