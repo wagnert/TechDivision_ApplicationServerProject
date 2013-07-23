@@ -32,7 +32,7 @@ class DemoServlet extends HttpServlet
 
     public function getBaseUrl()
     {
-        return DS . $this->getWebappName();
+        return DS . $this->getWebappName() . DS;
     }
 
     public function doGet($req, $res)
