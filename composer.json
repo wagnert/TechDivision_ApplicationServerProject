@@ -2,6 +2,9 @@
     "name": "foo/bar",
     "description": "Webapp created with ApplicationServerProject Stub",
     "version": "0.1.0",
+    "require": {
+        "components/jquery": "*"
+    },
     "authors": [
         {
             "name": "Your Name",
