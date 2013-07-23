@@ -4,23 +4,8 @@
     "version": "0.1.0",
     "require": {
         "components/jquery": "*",
-        "components/bootstrap": "*",
-        "components/font-awesome": "*"
-    },
-    "extra": {
-        "component": {
-            "scripts": [
-                "js/bootstrap.js"
-            ],
-            "styles": [
-                "css/bootstrap.css"
-            ],
-            "files": [
-                "img/*.png",
-                "js/bootstrap.min.js",
-                "css/bootstrap.min.css"
-            ]
-        }
+        "components/font-awesome": "*",
+        "components/bootstrap": "*"
     },
     "authors": [
         {
