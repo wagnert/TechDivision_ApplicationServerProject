@@ -27,7 +27,20 @@ class DemoServlet extends HttpServlet
 
     public function doGet($req, $res)
     {
-       $res->setContent($req->getUri());
-    }
+        // build path to template
+        $pathToTemplate = $this->getServletConfig()->getWebappPath()
+            . DS . 'templates' . DS . 'layout.phtml';
 
+        // check if the template is available
+        if (!file_exists($pathToTemplate)) {
+            throw new \Exception("Requested template '$pathToTemplate' is not available");
+        }
+
+        // process the template
+        ob_start();
+        require_once $pathToTemplate;
+
+        // set content to response
+        $res->setContent(ob_get_clean());
+    }
 }
