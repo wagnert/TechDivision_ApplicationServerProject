@@ -7,6 +7,21 @@
         "components/bootstrap": "*",
         "components/font-awesome": "*"
     },
+    "extra": {
+        "component": {
+            "scripts": [
+                "js/bootstrap.js"
+            ],
+            "styles": [
+                "css/bootstrap.css"
+            ],
+            "files": [
+                "img/*.png",
+                "js/bootstrap.min.js",
+                "css/bootstrap.min.css"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "Your Name",
