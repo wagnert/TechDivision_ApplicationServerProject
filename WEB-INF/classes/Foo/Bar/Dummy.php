@@ -1,3 +1,0 @@
-<?php
-
-// start implementing stuff
