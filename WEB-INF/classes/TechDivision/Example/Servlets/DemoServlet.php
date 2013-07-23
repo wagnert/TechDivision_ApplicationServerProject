@@ -12,7 +12,7 @@
 
 namespace TechDivision\Example\Servlets;
 
-use TechDivision\Example\Utilities\DemoTemplate;
+use TechDivision\Example\Templates\DemoTemplate;
 use TechDivision\ServletContainer\Http\HttpResponse;
 use TechDivision\ServletContainer\Http\HttpRequest;
 use TechDivision\ServletContainer\Servlets\HttpServlet;
