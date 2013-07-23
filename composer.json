@@ -1,6 +1,7 @@
 {
-    "name": "your/webapp",
-    "description": "Webapp created with ApplicationServerProject Stub",
+    "name": "techdivision/techdivision_applicationserverproject",
+    "type": "project",
+    "description": "A Webapp Project-Stub for the ApplicationServer",
     "version": "0.1.0",
     "require": {
         "components/jquery": "*",
@@ -9,8 +10,8 @@
     },
     "authors": [
         {
-            "name": "Your Name",
-            "email": "your.name@hostname.tld"
+            "name": "Johann Zelger",
+            "email": "j.zelger@techdivision.com"
         }
     ]
 }
