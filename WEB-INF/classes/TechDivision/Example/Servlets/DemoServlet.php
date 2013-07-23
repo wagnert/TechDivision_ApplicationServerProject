@@ -15,7 +15,7 @@ namespace TechDivision\Example\Servlets;
 use TechDivision\Example\Templates\DemoTemplate;
 use TechDivision\ServletContainer\Interfaces\Request;
 use TechDivision\ServletContainer\Interfaces\Response;
-use TechDivision\ServletContainer\Servlets\DefaultServlet;
+use TechDivision\ServletContainer\Servlets\HttpServlet;
 
 /**
  * @package     TechDivision\Example
@@ -25,7 +25,7 @@ use TechDivision\ServletContainer\Servlets\DefaultServlet;
  * @author      Johann Zelger <j.zelger@techdivision.com>
  */
 
-class DemoServlet extends DefaultServlet
+class DemoServlet extends HttpServlet
 {
     /**
      * @param Request $req
