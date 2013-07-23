@@ -1,5 +1,5 @@
 {
-    "name": "${namespace}/${webappname}",
+    "name": "foo/bar",
     "description": "Webapp created with ApplicationServerProject Stub",
     "version": "0.1.0",
     "authors": [
