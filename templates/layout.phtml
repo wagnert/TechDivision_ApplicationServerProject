@@ -36,8 +36,7 @@
             padding-bottom: 40px;
         }
         table td {
-            white-space:nowrap;
-            padding: 10px;
+            padding: 12px;
         }
         /* Custom container */
         .container-narrow {
@@ -68,6 +67,10 @@
         }
         .marketing p + h4 {
             margin-top: 28px;
+        }
+
+        .nowrap {
+            white-space:nowrap;
         }
     </style>
 
@@ -103,12 +106,12 @@
             <table class="table-bordered table-hover">
                 <tbody>
                     <tr>
-                        <td><strong>Request Uri:</strong></td>
+                        <td class="nowrap"><strong>Request Uri:</strong></td>
                         <td><?php echo $this->getRequestUri() ?></td>
                     </tr>
                     <tr>
-                        <td><strong>User-Agent:</strong></td>
-                        <td><?php echo $this->getUserAgent() ?></td>
+                        <td class="nowrap"><strong>User-Agent:</strong></td>
+                        <td><small><?php echo $this->getUserAgent() ?></small></td>
                     </tr>
                 </tbody>
             </table>
