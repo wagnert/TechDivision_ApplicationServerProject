@@ -33,6 +33,7 @@ class DemoTemplate extends AbstractTemplate
     protected $webappName;
     protected $requestUri;
     protected $userAgent;
+    protected $baseUrl;
 
     /**
      * @param mixed $requestUri
@@ -80,6 +81,14 @@ class DemoTemplate extends AbstractTemplate
     public function getWebappName()
     {
         return $this->webappName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBaseUrl()
+    {
+        return DS . $this->getWebappName() . DS;
     }
 
 }
