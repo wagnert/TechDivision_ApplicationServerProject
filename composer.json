@@ -1,5 +1,5 @@
 {
-    "name": "foo/bar",
+    "name": "your/webapp",
     "description": "Webapp created with ApplicationServerProject Stub",
     "version": "0.1.0",
     "require": {

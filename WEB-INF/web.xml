@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app version="2.4">
 
-    <display-name>Foo Bar</display-name>
+    <display-name>Your Webapp</display-name>
     <description>Webapp created with ApplicationServerProject Stub</description>
 
     <servlet>
@@ -35,12 +35,9 @@
         <url-pattern>/components/*</url-pattern>
     </servlet-mapping>
 
-
-    <!--
     <servlet-mapping>
         <servlet-name>PhpServlet</servlet-name>
         <url-pattern>/*.php</url-pattern>
     </servlet-mapping>
-    -->
 
 </web-app>
