@@ -41,7 +41,14 @@ class DemoServlet extends HttpServlet
         // init template
         $template = new DemoTemplate($pathToTemplate);
 
+        $baseUrl = '/';
+        // if the application has NOT been called over a VHost configuration append application folder naem
+        if (!$this->getServletConfig()->getApplication()->isVhostOf($req->getServerName())) {
+            $baseUrl .= $this->getServletConfig()->getApplication()->getName() . '/';
+        }
+
         // set vars in template
+        $template->setBaseUrl($baseUrl);
         $template->setRequestUri($req->getUri());
         $template->setUserAgent($req->getHeader("User-Agent"));
         $template->setWebappName($this->getServletConfig()->getApplication()->getName());

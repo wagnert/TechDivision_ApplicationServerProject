@@ -88,7 +88,16 @@ class DemoTemplate extends AbstractTemplate
      */
     public function getBaseUrl()
     {
-        return DS . $this->getWebappName() . DS;
+        return $this->baseUrl;
     }
+
+    /**
+     * @param mixed $baseUrl
+     */
+    public function setBaseUrl($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
+    }
+
 
 }
