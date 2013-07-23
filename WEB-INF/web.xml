@@ -18,6 +18,19 @@
         <servlet-class>\TechDivision\ServletContainer\Servlets\StaticResourceServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <description><![CDATA[A demo servlet that renders a template showing the current uri requested]]></description>
+        <display-name>DemoServlet</display-name>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>\TechDivision\Example\Servlets\DemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet>DemoServlet</servlet>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <!--
     <servlet-mapping>
         <servlet-name>PhpServlet</servlet-name>
         <url-pattern>/*.php</url-pattern>
@@ -27,5 +40,6 @@
         <servlet-name>StaticResourceServlet</servlet-name>
         <url-pattern>/static/*</url-pattern>
     </servlet-mapping>
+    -->
 
 </web-app>
