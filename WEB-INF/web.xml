@@ -31,6 +31,11 @@
     </servlet-mapping>
 
     <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>StaticResourceServlet</servlet-name>
         <url-pattern>/components/*</url-pattern>
     </servlet-mapping>
