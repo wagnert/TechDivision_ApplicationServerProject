@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <base href="<?php echo $this->getBaseUrl() ?>">
     <title>Template &middot; Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="../components/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="components/require.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -46,12 +47,14 @@
         margin-top: 28px;
       }
     </style>
-    <link href="../components/require.css" rel="stylesheet">
 
+    <?php /*
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
+    */ ?>
+
   </head>
 
   <body>
@@ -64,7 +67,7 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="muted">Project name</h3>
+        <h3 class="muted"><?php echo $this->getWebappName() ?></h3>
       </div>
 
       <hr>
@@ -112,6 +115,6 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../components/require.js"></script>
+    <script src="components/require.js"></script>
   </body>
 </html>

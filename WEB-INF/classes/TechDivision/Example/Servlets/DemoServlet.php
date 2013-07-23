@@ -25,8 +25,19 @@ use TechDivision\ServletContainer\Servlets\HttpServlet;
 class DemoServlet extends HttpServlet
 {
 
+    public function getWebappName()
+    {
+        return $this->getServletConfig()->getApplication()->getName();
+    }
+
+    public function getBaseUrl()
+    {
+        return DS . $this->getWebappName();
+    }
+
     public function doGet($req, $res)
     {
+
         // build path to template
         $pathToTemplate = $this->getServletConfig()->getWebappPath()
             . DS . 'templates' . DS . 'layout.phtml';
