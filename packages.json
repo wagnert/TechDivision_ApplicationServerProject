@@ -1,0 +1,16 @@
+{
+    "test/test": {
+        "name": "techdivision/techdivision_applicationsserverproject",
+    	"description": "A Webapp Project-Stub for the ApplicationServer",
+        "version": "0.1.0",
+	"source": {
+            "url": "/Users/zelgerj/Workspace/github/techdivision/TechDivision_ApplicationServerProject/.git",
+            "type": "git",
+            "reference": "master"
+        },
+        "authors": [{
+            "name": "Johann Zelger",
+            "email": "j.zelger@techdivision.com"
+        }]
+    }
+}
