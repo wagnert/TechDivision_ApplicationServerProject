@@ -13,9 +13,9 @@
 namespace TechDivision\Example\Servlets;
 
 use TechDivision\Example\Templates\DemoTemplate;
-use TechDivision\ServletContainer\Http\HttpResponse;
-use TechDivision\ServletContainer\Http\HttpRequest;
-use TechDivision\ServletContainer\Servlets\HttpServlet;
+use TechDivision\ServletContainer\Interfaces\Request;
+use TechDivision\ServletContainer\Interfaces\Response;
+use TechDivision\ServletContainer\Servlets\DefaultServlet;
 
 /**
  * @package     TechDivision\Example
@@ -25,14 +25,14 @@ use TechDivision\ServletContainer\Servlets\HttpServlet;
  * @author      Johann Zelger <j.zelger@techdivision.com>
  */
 
-class DemoServlet extends HttpServlet
+class DemoServlet extends DefaultServlet
 {
     /**
-     * @param HttpRequest $req
-     * @param HttpResponse $res
+     * @param Request $req
+     * @param Response $res
      * @throws \Exception
      */
-    public function doGet($req, $res)
+    public function doGet(Request $req, Response $res)
     {
         // build path to template
         $pathToTemplate = $this->getServletConfig()->getWebappPath()
