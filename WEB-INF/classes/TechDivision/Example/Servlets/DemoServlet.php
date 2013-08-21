@@ -36,7 +36,7 @@ class DemoServlet extends HttpServlet
     {
         // build path to template
         $pathToTemplate = $this->getServletConfig()->getWebappPath()
-            . DS . 'static' . DS . 'templates' . DS . 'layout.phtml';
+            . DIRECTORY_SEPARATOR . 'static' . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'layout.phtml';
 
         // init template
         $template = new DemoTemplate($pathToTemplate);
