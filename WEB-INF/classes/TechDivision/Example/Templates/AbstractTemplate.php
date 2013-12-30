@@ -79,7 +79,7 @@ class AbstractTemplate
         // turn on output buffering
         ob_start();
         // render template file via php
-        require_once $this->templateFilepath;
+        require $this->templateFilepath;
         // return rendered content
         return ob_get_clean();
     }
