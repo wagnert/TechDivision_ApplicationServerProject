@@ -52,7 +52,6 @@ class DemoServlet extends Servlet
      * @throws \TechDivision\Servlet\ServletException Is thrown if the request method is not implemented
      * @see \TechDivision\Servlet\Http\HttpServlet::doGet()
      */
-     */
     public function doGet(HttpServletRequest $servletRequest, HttpServletResponse $servletResponse)
     {
         // build path to template
@@ -64,17 +63,17 @@ class DemoServlet extends Servlet
 
         $baseUrl = '/';
         // if the application has NOT been called over a VHost configuration append application folder naem
-        if (!$this->getServletConfig()->getApplication()->isVhostOf($req->getServerName())) {
+        if (!$this->getServletConfig()->getApplication()->isVhostOf($servletRequest->getServerName())) {
             $baseUrl .= $this->getServletConfig()->getApplication()->getName() . '/';
         }
 
         // set vars in template
         $template->setBaseUrl($baseUrl);
-        $template->setRequestUri($req->getPathInfo());
-        $template->setUserAgent($req->getHeader("User-Agent"));
+        $template->setRequestUri($servletRequest->getPathInfo());
+        $template->setUserAgent($servletRequest->getHeader("User-Agent"));
         $template->setWebappName($this->getServletConfig()->getApplication()->getName());
 
         // set response content by render template
-        $res->setContent($template->render());
+        $servletResponse->appendBodyStream($template->render());
     }
 }
