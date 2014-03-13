@@ -41,6 +41,11 @@
     </servlet-mapping>
 
     <servlet-mapping>
+        <servlet-name>StaticResourceServlet</servlet-name>
+        <url-pattern>/static/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>PhpServlet</servlet-name>
         <url-pattern>/*.php</url-pattern>
     </servlet-mapping>
