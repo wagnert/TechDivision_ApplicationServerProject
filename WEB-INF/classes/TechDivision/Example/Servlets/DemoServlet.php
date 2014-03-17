@@ -24,9 +24,9 @@
 namespace TechDivision\Example\Servlets;
 
 use TechDivision\Example\Templates\DemoTemplate;
+use TechDivision\Servlet\Http\HttpServlet;
 use TechDivision\Servlet\Http\HttpServletRequest;
 use TechDivision\Servlet\Http\HttpServletResponse;
-use TechDivision\ServletEngine\Http\Servlet;
 
 /**
  * Demo servlet handling GET requests.
@@ -40,7 +40,7 @@ use TechDivision\ServletEngine\Http\Servlet;
  * @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link       https://github.com/techdivision/TechDivision_ApplicationServerWebsite
  */
-class DemoServlet extends Servlet
+class DemoServlet extends HttpServlet
 {
     
     /**
