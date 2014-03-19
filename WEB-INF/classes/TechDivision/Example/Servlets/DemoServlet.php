@@ -23,10 +23,11 @@
 
 namespace TechDivision\Example\Servlets;
 
-use TechDivision\Example\Templates\DemoTemplate;
+use TechDivision\Http\HttpProtocol;
 use TechDivision\Servlet\Http\HttpServlet;
 use TechDivision\Servlet\Http\HttpServletRequest;
 use TechDivision\Servlet\Http\HttpServletResponse;
+use TechDivision\Example\Templates\DemoTemplate;
 
 /**
  * Demo servlet handling GET requests.
@@ -44,7 +45,8 @@ class DemoServlet extends HttpServlet
 {
     
     /**
-     *
+     * Handles a Http GET request.
+     * 
      * @param \TechDivision\Servlet\Http\ServletRequest  $servletRequest  The request instance
      * @param \TechDivision\Servlet\Http\ServletResponse $servletResponse The response instance
      *
@@ -63,15 +65,15 @@ class DemoServlet extends HttpServlet
 
         $baseUrl = '/';
         // if the application has NOT been called over a VHost configuration append application folder naem
-        if (!$this->getServletConfig()->getApplication()->isVhostOf($servletRequest->getServerName())) {
-            $baseUrl .= $this->getServletConfig()->getApplication()->getName() . '/';
+        if ($servletRequest->getContext()->isVhostOf($servletRequest->getServerName()) === false) {
+            $baseUrl .= $servletRequest->getContext()->getName() . '/';
         }
 
         // set vars in template
         $template->setBaseUrl($baseUrl);
         $template->setRequestUri($servletRequest->getPathInfo());
-        $template->setUserAgent($servletRequest->getHeader("User-Agent"));
-        $template->setWebappName($this->getServletConfig()->getApplication()->getName());
+        $template->setUserAgent($servletRequest->getHeader(HttpProtocol::HEADER_USER_AGENT));
+        $template->setWebappName($servletRequest->getContext()->getName());
 
         // set response content by render template
         $servletResponse->appendBodyStream($template->render());
